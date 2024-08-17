@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 aseprite_executable_path="\"C:\\Program Files\\Aseprite\\Aseprite.exe\""
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/nklbdev.aseprite_importers/plugin.cfg")
