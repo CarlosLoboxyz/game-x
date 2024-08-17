@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://djhnv645lo8ei"]
+
+[ext_resource type="PackedScene" uid="uid://gploy3fuvqeb" path="res://block.tscn" id="1_ep5b4"]
+[ext_resource type="PackedScene" uid="uid://bmhsmao75553g" path="res://player.tscn" id="2_jungb"]
+
+[node name="world" type="Node2D"]
+y_sort_enabled = true
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_ep5b4")]
+position = Vector2(359, 332)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_ep5b4")]
+position = Vector2(529, 415)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_ep5b4")]
+position = Vector2(714, 235)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_ep5b4")]
+position = Vector2(467, 158)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_ep5b4")]
+position = Vector2(734, 382)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_ep5b4")]
+position = Vector2(352, 181)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_jungb")]
+position = Vector2(481, 256)
