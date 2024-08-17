@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpjj8m4th2hc5"]
+[gd_scene load_steps=6 format=3 uid="uid://djhnv645lo8ei"]
 
 [ext_resource type="Texture2D" uid="uid://c4875145nvsau" path="res://sprites/rock_tileset.png" id="1_0e8w2"]
-[ext_resource type="PackedScene" path="res://block.tscn" id="1_ep5b4"]
-[ext_resource type="PackedScene" path="res://player.tscn" id="2_jungb"]
+[ext_resource type="PackedScene" uid="uid://gploy3fuvqeb" path="res://objects/block.tscn" id="1_ep5b4"]
+[ext_resource type="PackedScene" uid="uid://bmhsmao75553g" path="res://player/player.tscn" id="2_jungb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8wwa"]
 texture = ExtResource("1_0e8w2")
