@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpjj8m4th2hc5"]
+[gd_scene load_steps=10 format=3 uid="uid://dpjj8m4th2hc5"]
 
 [ext_resource type="Texture2D" uid="uid://c4875145nvsau" path="res://sprites/rock_tileset.png" id="1_0e8w2"]
 [ext_resource type="PackedScene" uid="uid://gploy3fuvqeb" path="res://objects/block.tscn" id="1_ep5b4"]
@@ -14,6 +14,9 @@ texture = ExtResource("1_0e8w2")
 sources/1 = SubResource("TileSetAtlasSource_n8wwa")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x6ft1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cnc6r"]
+radius = 30.8022
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -42,14 +45,13 @@ position = Vector2(734, 382)
 [node name="StaticBody2D6" parent="." instance=ExtResource("1_ep5b4")]
 position = Vector2(352, 181)
 
-[node name="player" parent="." instance=ExtResource("2_jungb")]
+[node name="player" parent="." groups=["player"] instance=ExtResource("2_jungb")]
 position = Vector2(481, 256)
 
-[node name="enemy" type="CharacterBody2D" parent="." node_paths=PackedStringArray("player")]
+[node name="enemy" type="CharacterBody2D" parent="."]
 position = Vector2(304, 163)
 scale = Vector2(-1.32809, 1.09755)
 script = ExtResource("4_la7wc")
-player = NodePath("../player")
 
 [node name="Sprite2D" type="Sprite2D" parent="enemy"]
 texture = ExtResource("5_173q8")
@@ -58,3 +60,12 @@ texture = ExtResource("5_173q8")
 position = Vector2(-4.59572e-05, -4.55559)
 scale = Vector2(0.698819, 0.781332)
 shape = SubResource("CircleShape2D_x6ft1")
+
+[node name="Area2D" type="Area2D" parent="enemy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy/Area2D"]
+scale = Vector2(3.89137, 4.86315)
+shape = SubResource("CircleShape2D_cnc6r")
+
+[connection signal="body_entered" from="enemy/Area2D" to="enemy" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="enemy/Area2D" to="enemy" method="_on_area_2d_body_exited"]
