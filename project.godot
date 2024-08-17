@@ -23,10 +23,6 @@ aseprite_executable_path="\"C:\\Program Files\\Aseprite\\Aseprite.exe\""
 
 window/stretch/mode="canvas_items"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/nklbdev.aseprite_importers/plugin.cfg")
-
 [input]
 
 ui_left={
